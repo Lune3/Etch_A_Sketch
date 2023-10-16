@@ -19,6 +19,32 @@
 .selectionBox{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 45px;
     width: 300px;
+}
+
+.box{
+    border-radius: 0;
+    font-size: 22px;
+    height: 50px;
+}
+
+.color{
+    font-size: 28px;
+    border:1px solid black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color p{
+    margin: 0;
+    padding: 0;
+    align-self: center;
+}
+
+.color div{
+    align-self: flex-end;
+    background-color: black;
 }
