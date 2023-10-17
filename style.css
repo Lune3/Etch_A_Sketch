@@ -34,17 +34,37 @@
     border:1px solid black;
     height: 50px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .color p{
     margin: 0;
     padding: 0;
-    align-self: center;
 }
 
 .color div{
-    align-self: flex-end;
+    position: absolute;
+    right: 0;
     background-color: black;
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+}
+
+.sliderContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sliderContainer p{
+    font-size: 26px;
+    margin:0;
+}
+
+.sliderContainer input{
+    width: 200px;
 }
