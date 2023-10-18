@@ -15,6 +15,12 @@
     height: 560px;
     width: 560px;
     border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid{
+    background-color: black;
 }
 
 .selectionBox{
@@ -28,16 +34,6 @@
     border-radius: 0;
     font-size: 22px;
     height: 50px;
-}
-
-.color{
-    font-size: 28px;
-    border:1px solid black;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 }
 
 .color p{
@@ -69,3 +65,4 @@
 .slider{
     width: 200px;
 }
+
