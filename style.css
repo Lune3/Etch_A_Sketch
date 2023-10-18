@@ -11,9 +11,10 @@
 }
 
 .drawingBox{
-    background-color: black;
+    background-color: white;
     height: 560px;
     width: 560px;
+    border: 1px solid black;
 }
 
 .selectionBox{
@@ -65,6 +66,6 @@
     margin:0;
 }
 
-.sliderContainer input{
+.slider{
     width: 200px;
 }
