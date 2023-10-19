@@ -18,17 +18,15 @@ function createGrid(area){
     area = parseInt(area);
     const gridArea = document.querySelector(".drawingBox");
     gridArea.textContent = '';
-    for(let i = 0;i < area;i++)
+    for(let i = 0;i < area*area;i++)
     {   
         let grid = document.createElement('div');
         grid.className = "grid";
-        grid.style.height = `${500/area}`;
-        grid.style.width = `${500/area}`;
-        gridArea.appendChild(grid);
+        grid.style.height = `${560/(area)}px`;
+        grid.style.width = `${560/area}px`;
+        gridArea.appendChild(grid); 
     }
-
 }
-
 slider();
 
 
