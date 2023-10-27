@@ -27,6 +27,34 @@ function createGrid(area){
         gridArea.appendChild(grid); 
     }
 }
+
+function drawingMode(){
+    const selectedMode = document.querySelectorAll("button");
+    selectedMode.forEach((click) => {
+        click.addEventListener("click",(e) =>{
+            switch(e.target.textContent)
+            {
+                case "Draw":
+                    console.log("1");
+                    break;
+                case "Random":
+                    console.log("2");
+                    break;
+                case "Eraser":
+                    console.log("3");
+                    break;
+                case "Clear":
+                    console.log("4");
+                    break;
+            }
+
+        })
+    });
+}
+
+
+
+drawingMode();
 slider();
 
 
