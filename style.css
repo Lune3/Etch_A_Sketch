@@ -20,14 +20,14 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    flex-grow: 1;
 }
 
 .grid{
     background-color: black;
     margin-right: 0px;
-    flex: 1 1 auto;
+    /* flex: 1 1 auto; */
     border: 1px solid red;
+    box-sizing: border-box;
 }
 
 .selectionBox{
@@ -70,6 +70,6 @@
 }
 
 .slider{
-    width: 200px;
+    width: 200px; 
 }
 
