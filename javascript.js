@@ -38,7 +38,7 @@ function drawingMode(){
                     draw();
                     break;
                 case "Random":
-                    console.log("2");
+                    random();
                     break;
                 case "Eraser":
                     erase();
@@ -65,6 +65,31 @@ function draw(){
             if(mouseIsDown)
             {
                 box.style.backgroundColor = "Black";
+            }
+        })
+    })
+}
+
+function random(){
+    let arr = [];
+    for(let i = 0;i < 3;i++)
+    {
+        let rand = Math.floor((Math.random()) * 255);
+        arr.push(rand);
+    }
+    const drawingPixel = document.querySelectorAll(".grid");
+    let mouseIsDown = false;
+    drawingPixel.forEach((box) =>{
+        box.addEventListener("mousedown",() =>{
+            mouseIsDown = true;
+        })
+        box.addEventListener("mouseup",() =>{
+            mouseIsDown = false;
+        })
+        box.addEventListener("mousemove",() =>{
+            if(mouseIsDown)
+            {
+                box.style.backgroundColor = `rgb(${arr[0]},${arr[1]},${arr[2]})`;
             }
         })
     })
@@ -99,5 +124,6 @@ function erase(){
 
 drawingMode();
 slider();
+
 
 
