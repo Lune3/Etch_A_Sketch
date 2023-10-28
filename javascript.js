@@ -35,7 +35,7 @@ function drawingMode(){
             switch(e.target.textContent)
             {
                 case "Draw":
-                    console.log("1");
+                    draw();
                     break;
                 case "Random":
                     console.log("2");
@@ -47,12 +47,28 @@ function drawingMode(){
                     console.log("4");
                     break;
             }
-
         })
     });
 }
 
-
+function draw(){
+    const drawingPixel = document.querySelectorAll(".grid");
+    let mouseIsDown = false;
+    drawingPixel.forEach((box) =>{
+        box.addEventListener("mousedown",() =>{
+            mouseIsDown = true;
+        })
+        box.addEventListener("mouseup",() =>{
+            mouseIsDown = false;
+        })
+        box.addEventListener("mousemove",() =>{
+            if(mouseIsDown)
+            {
+                box.style.backgroundColor = "Black";
+            }
+        })
+    })
+}
 
 drawingMode();
 slider();
