@@ -90,6 +90,9 @@ function random(){
             if(mouseIsDown)
             {
                 box.style.backgroundColor = `rgb(${arr[0]},${arr[1]},${arr[2]})`;
+                arr[0] = Math.floor((Math.random()) * 255);
+                arr[1] = Math.floor((Math.random()) * 255);
+                arr[2] = Math.floor((Math.random()) * 255);
             }
         })
     })
