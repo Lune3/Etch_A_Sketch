@@ -41,7 +41,7 @@ function drawingMode(){
                     console.log("2");
                     break;
                 case "Eraser":
-                    console.log("3");
+                    erase();
                     break;
                 case "Clear":
                     console.log("4");
@@ -65,6 +65,25 @@ function draw(){
             if(mouseIsDown)
             {
                 box.style.backgroundColor = "Black";
+            }
+        })
+    })
+}
+
+function erase(){
+    const drawingPixel = document.querySelectorAll(".grid");
+    let mouseIsDown = false;
+    drawingPixel.forEach((box) =>{
+        box.addEventListener("mousedown",() =>{
+            mouseIsDown = true;
+        })
+        box.addEventListener("mouseup",() =>{
+            mouseIsDown = false;
+        })
+        box.addEventListener("mousemove",() =>{
+            if(mouseIsDown)
+            {
+                box.style.backgroundColor = "White";
             }
         })
     })
