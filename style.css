@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600&family=Pacifico&display=swap');
 
 body{
-    background-color: #BDE4FF;
+    background-color: #9fc2db;
     margin: 0;
 }
 
@@ -10,7 +10,7 @@ body{
     margin-bottom: 100px;
     font-size: 60px;
     font-family: "Mukta";
-    color: #F86F03;
+    color: #299432;
 }
 
 .drawing{

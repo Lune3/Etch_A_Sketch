@@ -1,3 +1,17 @@
+function initialCreateGrid(){
+    let area = 16;
+    const gridArea = document.querySelector(".drawingBox");
+    gridArea.textContent = '';
+    for(let i = 1;i <= area * area;i++)
+    {   
+        let grid = document.createElement('div');
+        grid.className = "grid";
+        grid.style.height = `${560/(area)}px`;
+        grid.style.width = `${560/(area)}px`;
+        gridArea.appendChild(grid); 
+    }
+}
+
 function slider(){
 
     const slider = document.querySelector("#slider");
@@ -124,7 +138,7 @@ function erase(){
     })
 }
 
-
+initialCreateGrid();
 drawingMode();
 slider();
 
