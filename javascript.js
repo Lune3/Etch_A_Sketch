@@ -44,7 +44,7 @@ function drawingMode(){
                     erase();
                     break;
                 case "Clear":
-                    console.log("4");
+                    clear();
                     break;
             }
         })
@@ -70,6 +70,13 @@ function draw(){
     })
 }
 
+function clear(){
+    const drawingPixel = document.querySelectorAll(".grid");
+    drawingPixel.forEach((box) => {
+        box.style.backgroundColor = "White";
+    })
+}
+
 function erase(){
     const drawingPixel = document.querySelectorAll(".grid");
     let mouseIsDown = false;
@@ -88,6 +95,7 @@ function erase(){
         })
     })
 }
+
 
 drawingMode();
 slider();
